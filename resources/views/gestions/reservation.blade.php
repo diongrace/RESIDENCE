@@ -43,20 +43,22 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row mb-3">
-                            <div class="col-md-6">
-                                <div class="form-floating mb-3 mb-md-0">
-                                    <input class="form-control" id="sejour" type="text" name="sejour" placeholder="Séjour" />
-                                    <label for="sejour">Séjour</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating mb-3 mb-md-0">
-                                    <input class="form-control" id="logement" type="text" name="logement" placeholder="Type de Logement" />
-                                    <label for="logement">Type de Logement</label>
-                                </div>
-                            </div>
+
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="sejour" type="sejour" name="sejour" placeholder="sejour" />
+                            <label for="email">votre sejours</label>
                         </div>
+                              <!-- Type de Logement -->
+                              <div class="form-floating mb-3">
+                                <select class="form-select" id="logement" name="logement" required>
+                                    <option value="">-- Sélectionner le type de logement --</option>
+                                    <option value="appartement">Appartement</option>
+                                    <option value="maison">Maison</option>
+                                    <option value="studio">Studio</option>
+                                    <option value="chambre">Chambre</option>
+                                </select>
+                                <label for="logementType">Type de Logement</label>
+                            </div>
                         <div class="form-floating mb-3">
                             <input class="form-control" id="email" type="email" name="email" placeholder="name@example.com" />
                             <label for="email">Email address</label>

@@ -28,8 +28,8 @@
                 </a>
                 <div class="collapse" id="menuUtilisateurs" aria-labelledby="headingUtilisateurs" data-bs-parent="#sidebarAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="/">Ajouter un Utilisateur</a>
-                        <a class="nav-link" href="/gestions/utilisateurs">Liste des Utilisateurs</a>
+                        <a class="nav-link" href="/utilisateur/forms">Ajouter un Utilisateur</a>
+                        <a class="nav-link" href="/">Liste des Utilisateurs</a>
                     </nav>
                 </div>
                 
@@ -40,10 +40,24 @@
                 </a>
                 <div class="collapse" id="menuPaiements" aria-labelledby="headingPaiements" data-bs-parent="#sidebarAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="/gestions/paiements">Liste des Paiements</a>
-                        <a class="nav-link" href="/gestions/nouveau-paiement">Nouveau Paiement</a>
+                        <a class="nav-link" href="/">Liste des Paiements</a>
+                        <a class="nav-link" href="/payment/process">Nouveau Paiement</a>
                     </nav>
                 </div>
+
+                <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#menuLogements" aria-expanded="false" aria-controls="menuLogements">
+                    <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
+                    Gestion Logements
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-chevron-down"></i></div>
+                </a>
+                <div class="collapse" id="menuLogements" aria-labelledby="headingLogements" data-bs-parent="#sidebarAccordion">
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" href="/logement">Ajouter un Logement</a>
+                        <a class="nav-link" href="/">Liste des Logements</a>
+                        <a class="nav-link" href="/logements/calendrier">Calendrier</a>
+                    </nav>
+                </div>
+                
                 
                
                         <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
