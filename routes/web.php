@@ -50,6 +50,18 @@ Route::get('/logement', function () {
     return view('/logement');
 });
 
+Route::get('/payment/index', function () {
+    return view('/payment/index');
+});
+
+Route::get('/payment/show', function () {
+    return view('/payment/show');
+});
+
+Route::get('/payment/edit', function () {
+    return view('/payment/edit');
+});
+
 // Route pour afficher reservation
 Route::get('/gestions/reservationlist', [ReservationController::class, 'index'])->name('reservations.index');
 Route::post('/store', [ReservationController::class, 'store'])->name('/gestions/reservation');
@@ -57,10 +69,6 @@ Route::get('/gestions/{id}show', [ReservationController::class, 'show'])->name('
 Route::get('/gestions/{id}/edit', [ReservationController::class, 'edit'])->name('gestions.edit');
 Route::put('/gestions/update/{id}', [ReservationController::class, 'update'])->name('gestions.update');
 Route::delete('/gestions/reservation/{id}', [ReservationController::class, 'destroy'])->name('reservation.destroy');
-
-// Route pour afficher paiement
-Route::get('/payment', [PaymentController::class, 'showPaymentForm'])->name('payment.form');
-Route::post('/payment/process', [PaymentController::class, 'processPayment'])->name('payment.process');
 
 // Route pour afficher user
 Route::get('/utilisateur/forms', [FormsController::class, 'create'])->name('utilisateur.forms');
@@ -71,4 +79,12 @@ Route::post('/utilisateur/forms', [FormsController::class, 'store1'])->name('uti
 Route::get('/logement', [LogementController::class, 'create1'])->name('logement');
 Route::post('/logements', [LogementController::class, 'store2'])->name('logements.store');
 
+// Route pour afficher paiement
+Route::get('/payment', [PaymentController::class, 'showPaymentForm'])->name('payment.form');
+Route::post('/payment/process', [PaymentController::class, 'store3'])->name('payment.store3');
+Route::get('/payment', [PaymentController::class, 'index'])->name('payment.index');
+Route::get('/payment/{id}', [PaymentController::class, 'show'])->name('payment.show');
+Route::get('/payment/{id}/edit', [PaymentController::class, 'edit'])->name('payment.edit');
+Route::put('/payment/{id}', [PaymentController::class, 'update'])->name('payment.update');
+Route::delete('/payment/{id}', [PaymentController::class, 'destroy'])->name('payment.destroy');
 

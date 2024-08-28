@@ -4,27 +4,22 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class CreateLogementsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
+    public function up()
     {
         Schema::create('logements', function (Blueprint $table) {
             $table->id();
-            $table->string('logement'); // Type de logement
-            $table->string('localite'); // Localisation
-            $table->integer('chambres'); // Nombre de chambres
+            $table->string('logement');
+            $table->string('localite');
+            $table->integer('chambres');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('logements');
     }
-};
+}
+

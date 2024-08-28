@@ -12,16 +12,16 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('payments', function (Blueprint $table) {
-
             $table->id();
             $table->string('payment_method');
-            $table->string('phone_number')->nullable(); 
-            $table->string('pin_code')->nullable(); 
-            $table->string('card_number')->nullable(); 
+            $table->string('phone_number')->nullable();
+            $table->string('pin_code')->nullable();
+            $table->string('card_number')->nullable();
             $table->string('expiry_date')->nullable();
             $table->string('cvv')->nullable();
             $table->timestamps();
         });
+        
     }
 
     /**

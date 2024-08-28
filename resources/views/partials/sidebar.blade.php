@@ -40,7 +40,7 @@
                 </a>
                 <div class="collapse" id="menuPaiements" aria-labelledby="headingPaiements" data-bs-parent="#sidebarAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="/">Liste des Paiements</a>
+                        <a class="nav-link" href="/payment/index">Liste des Paiements</a>
                         <a class="nav-link" href="/payment/process">Nouveau Paiement</a>
                     </nav>
                 </div>
