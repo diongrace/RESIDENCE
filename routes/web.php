@@ -19,7 +19,7 @@ Route::get('/gestions/reservation', function () {
 });
 
 Route::get('/gestions/reservationlist', function () {
-    return view('/gestions.reservationlist');
+    return view('/gestions.reservationlist'); 
 });
 
 Route::get('/gestions/edit', function () {
@@ -82,7 +82,7 @@ Route::post('/logements', [LogementController::class, 'store2'])->name('logement
 // Route pour afficher paiement
 Route::get('/payment', [PaymentController::class, 'showPaymentForm'])->name('payment.form');
 Route::post('/payment/process', [PaymentController::class, 'store3'])->name('payment.store3');
-Route::get('/payment', [PaymentController::class, 'index'])->name('payment.index');
+Route::get('/payment/index', [PaymentController::class, 'index'])->name('payment.index');
 Route::get('/payment/{id}', [PaymentController::class, 'show'])->name('payment.show');
 Route::get('/payment/{id}/edit', [PaymentController::class, 'edit'])->name('payment.edit');
 Route::put('/payment/{id}', [PaymentController::class, 'update'])->name('payment.update');

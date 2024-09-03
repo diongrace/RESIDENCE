@@ -37,7 +37,7 @@
               <div class="card-body">
 
     <!-- Formulaire de modification -->
-    <form action="{{ route('payment.edit', $payment->id) }}" method="POST">
+    <form action="{{ route('payment.update', $payment->id) }}" method="POST">
         @csrf
         @method('PUT')
     

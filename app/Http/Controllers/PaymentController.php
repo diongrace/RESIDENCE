@@ -120,7 +120,7 @@ class PaymentController extends Controller
     public function edit($id)
     {
         $payment = Payments::findOrFail($id);
-        return view('payment.edit', compact('payments'));
+        return view('payment.edit', compact('payment'));
     }
 
     /**
